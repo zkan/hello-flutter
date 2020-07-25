@@ -14,8 +14,50 @@ class MyApp extends StatelessWidget {
           ),
         ),
         body: Container(
-          child: Text('Hello, ODDS!'),
-        ),
+            child: ListView(
+          children: <Widget>[
+            Card(
+              child: Container(
+                child: Row(
+                  children: <Widget>[
+                    Text('Image'),
+                    Text('Content'),
+                  ],
+                ),
+              ),
+            ),
+            Card(
+              child: Container(
+                child: Row(
+                  children: <Widget>[
+                    Text('Image'),
+                    Text('Content'),
+                  ],
+                ),
+              ),
+            ),
+            Card(
+              child: Container(
+                child: Row(
+                  children: <Widget>[
+                    Text('Image'),
+                    Text('Content'),
+                  ],
+                ),
+              ),
+            ),
+            Card(
+              child: Container(
+                child: Row(
+                  children: <Widget>[
+                    Text('Image'),
+                    Text('Content'),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        )),
       ),
     );
   }
