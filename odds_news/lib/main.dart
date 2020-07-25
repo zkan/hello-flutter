@@ -14,50 +14,51 @@ class MyApp extends StatelessWidget {
           ),
         ),
         body: Container(
-            child: ListView(
-          children: <Widget>[
-            Card(
-              child: Container(
-                child: Row(
-                  children: <Widget>[
-                    Text('Image'),
-                    Text('Content'),
-                  ],
+          child: ListView(
+            children: <Widget>[
+              Card(
+                child: Container(
+                  child: Row(
+                    children: <Widget>[
+                      Text('Image'),
+                      Text('Content'),
+                    ],
+                  ),
                 ),
               ),
-            ),
-            Card(
-              child: Container(
-                child: Row(
-                  children: <Widget>[
-                    Text('Image'),
-                    Text('Content'),
-                  ],
+              Card(
+                child: Container(
+                  child: Row(
+                    children: <Widget>[
+                      Text('Image'),
+                      Text('Content'),
+                    ],
+                  ),
                 ),
               ),
-            ),
-            Card(
-              child: Container(
-                child: Row(
-                  children: <Widget>[
-                    Text('Image'),
-                    Text('Content'),
-                  ],
+              Card(
+                child: Container(
+                  child: Row(
+                    children: <Widget>[
+                      Text('Image'),
+                      Text('Content'),
+                    ],
+                  ),
                 ),
               ),
-            ),
-            Card(
-              child: Container(
-                child: Row(
-                  children: <Widget>[
-                    Text('Image'),
-                    Text('Content'),
-                  ],
+              Card(
+                child: Container(
+                  child: Row(
+                    children: <Widget>[
+                      Text('Image'),
+                      Text('Content'),
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
-        )),
+            ],
+          ),
+        ),
       ),
     );
   }
