@@ -25,7 +25,7 @@ class Marketing {
     return this.salePrice * (this.getCommission() / 100);
   }
 
-  void showInfo() {
+  void toInfo() {
     print("ID: ${this.id}");
     print("First Name: ${this.firstName}");
     print("Last Name: ${this.lastName}");

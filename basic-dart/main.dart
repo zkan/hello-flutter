@@ -26,9 +26,9 @@ void main() {
         salePrice: 100000.2,
     );
 
-    print(marketing.id);
-    print(marketing.firstName);
-    print(marketing.lastName);
+    // print(marketing.id);
+    // print(marketing.firstName);
+    // print(marketing.lastName);
 
-    marketing.showInfo();
+    marketing.toInfo();
 }
