@@ -19,6 +19,12 @@ class HomePage extends StatelessWidget {
           maxLines: 4,
           overflow: TextOverflow.ellipsis,
         ),
+        elevation: 10,
+        actions: [
+          Icon(Icons.notifications),
+          Icon(Icons.person),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.person)),
+        ],
       ),
     );
   }
