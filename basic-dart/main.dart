@@ -23,11 +23,13 @@ void main() {
         id: 1,
         firstName: "Kan",
         lastName: "Ouivirach",
+        salePrice: 100002.0,
+        commission: 10.0,
     );
 
     print(marketing.id);
     print(marketing.firstName);
     print(marketing.lastName);
 
-    print(marketing.getCommission(5000000));
+    marketing.showInfo();
 }
