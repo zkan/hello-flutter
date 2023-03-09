@@ -1,6 +1,7 @@
 import 'async.dart';
 import 'class.dart';
 import 'marketing.dart';
+import 'marketing-exception.dart';
 
 void main() async {
   print("Running");
@@ -35,17 +36,22 @@ void main() async {
 
   // Option 1: Use then
   getName().then((value) => print(value));
+  print("----------");
 
   // Option 2: Use async & await
   String name = await getName();
   print(name);
+  print("----------");
 
   await marketing.fetchMarketing();
+  print("----------");
 
-  Marketing future_marketing = await fetchMarketing();
+  Marketing future_marketing = await fetchMarketing(10002);
   future_marketing.toInfo();
+  print("----------");
 
-  fetchMarketing().then((marketing) => marketing.toInfo());
+  fetchMarketing(10002).then((marketing) => marketing.toInfo());
+  print("----------");
 
   // fetchMarketingWithError()
   //   .then(
@@ -61,4 +67,14 @@ void main() async {
   } catch (e) {
     print(e);
   }
+  print("----------");
+
+  try {
+    await fetchMarketing(99);
+  } on MarketingException catch (e) {
+    print(e.message);
+    print("Code: ${e.code}");
+  }
+  print("----------");
+
 }

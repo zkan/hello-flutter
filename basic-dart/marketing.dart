@@ -1,3 +1,5 @@
+import 'marketing-exception.dart';
+
 class Marketing {
   int id;
   String firstName;
@@ -9,7 +11,11 @@ class Marketing {
     required this.firstName,
     required this.lastName,
     required this.salePrice,
-  });
+  }) {
+    if (this.salePrice < 100) {
+      throw MarketingException("E100", "Error: Sales price is less then 100฿");
+    }
+  }
 
   double getCommission() {
     if (this.salePrice > 100000) {
@@ -43,14 +49,14 @@ class Marketing {
 
 }
 
-Future<Marketing> fetchMarketing() {
+Future<Marketing> fetchMarketing(double salePrice) {
   return Future.delayed(
     Duration(seconds: 1), 
     () => Marketing(
       id: 1, 
       firstName: "Kan", 
       lastName: "Ouivirach", 
-      salePrice: 10002.0
+      salePrice: salePrice,
     )
   );
 }
