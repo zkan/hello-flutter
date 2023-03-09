@@ -54,3 +54,8 @@ Future<Marketing> fetchMarketing() {
     )
   );
 }
+
+Future<Marketing> fetchMarketingWithError() {
+  throw Exception("Error when fetching marketing");
+  // throw "Error when fetching marketing";
+}

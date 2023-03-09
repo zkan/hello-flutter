@@ -3,47 +3,62 @@ import 'class.dart';
 import 'marketing.dart';
 
 void main() async {
-    print("Running");
+  print("Running");
 
-    var cat = Cat(); // Prefer this
-    Cat cat2 = Cat();
-    Cat cat3 = new Cat();
+  var cat = Cat(); // Prefer this
+  Cat cat2 = Cat();
+  Cat cat3 = new Cat();
 
-    cat.id = 1;
-    print(cat.id);
+  cat.id = 1;
+  print(cat.id);
 
-    // We can't do this since it's a private variable
-    // print(cat._private_id);
+  // We can't do this since it's a private variable
+  // print(cat._private_id);
 
-    // var marketing = Marketing();
-    // marketing.id = 1;
-    // marketing.firstName = "Kan";
-    // marketing.lastName = "Ouivirach";
+  // var marketing = Marketing();
+  // marketing.id = 1;
+  // marketing.firstName = "Kan";
+  // marketing.lastName = "Ouivirach";
 
-    var marketing = Marketing(
-        id: 1,
-        firstName: "Kan",
-        lastName: "Ouivirach",
-        salePrice: 100000.2,
-    );
+  var marketing = Marketing(
+      id: 1,
+      firstName: "Kan",
+      lastName: "Ouivirach",
+      salePrice: 100000.2,
+  );
 
-    // print(marketing.id);
-    // print(marketing.firstName);
-    // print(marketing.lastName);
+  // print(marketing.id);
+  // print(marketing.firstName);
+  // print(marketing.lastName);
 
-    marketing.toInfo();
+  marketing.toInfo();
 
-    // Option 1: Use then
-    getName().then((value) => print(value));
+  // Option 1: Use then
+  getName().then((value) => print(value));
 
-    // Option 2: Use async & await
-    String name = await getName();
-    print(name);
+  // Option 2: Use async & await
+  String name = await getName();
+  print(name);
 
-    await marketing.fetchMarketing();
+  await marketing.fetchMarketing();
 
-    Marketing future_marketing = await fetchMarketing();
-    future_marketing.toInfo();
+  Marketing future_marketing = await fetchMarketing();
+  future_marketing.toInfo();
 
-    fetchMarketing().then((marketing) => marketing.toInfo());
+  fetchMarketing().then((marketing) => marketing.toInfo());
+
+  // fetchMarketingWithError()
+  //   .then(
+  //     (marketing) => marketing.toInfo(), 
+  //     onError: (e) => print(e),
+  //   ).catchError(print);
+
+  try {
+    await fetchMarketingWithError();
+  } on Exception catch (e) {
+    print("On Exception");
+    print(e);
+  } catch (e) {
+    print(e);
+  }
 }
