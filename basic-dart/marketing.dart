@@ -3,18 +3,22 @@ class Marketing {
   String firstName;
   String lastName;
   double salePrice;
-  double commission;
 
   Marketing({
     required this.id,
     required this.firstName,
     required this.lastName,
     required this.salePrice,
-    required this.commission,
   });
 
   double getCommission() {
-    return this.commission;
+    if (this.salePrice > 100000) {
+      return 10.0;
+    } else if (this.salePrice > 50000) {
+      return 3.0;
+    }
+    
+    return 0.0;
   }
 
   double getCommissionAmount() {

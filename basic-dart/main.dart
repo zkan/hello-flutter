@@ -23,8 +23,7 @@ void main() {
         id: 1,
         firstName: "Kan",
         lastName: "Ouivirach",
-        salePrice: 100002.0,
-        commission: 10.0,
+        salePrice: 100000.2,
     );
 
     print(marketing.id);
