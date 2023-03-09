@@ -26,7 +26,7 @@ class Marketing {
     print("First Name: ${this.firstName}");
     print("Last Name: ${this.lastName}");
     print("Sale price: ${this.salePrice}฿");
-    print("Commission: 10.0%");
+    print("Commission: ${getCommission()}%");
     print("Commission amount: ${getCommissionAmount()}฿");
   }
 }
