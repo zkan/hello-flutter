@@ -1,7 +1,7 @@
 class Marketing {
-    late int id;
-    late String firstName;
-    late String lastName;
+    int id;
+    String firstName;
+    String lastName;
 
     Marketing({
         required this.id,
