@@ -7,13 +7,18 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("ODDS Calculator",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              height: 1.5,
-              color: Colors.indigo,
-            )),
+        title: const Text(
+          "ODDS Calculator",
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.w500,
+            height: 1.5,
+            color: Colors.indigo,
+          ),
+          textAlign: TextAlign.left,
+          maxLines: 4,
+          overflow: TextOverflow.ellipsis,
+        ),
       ),
     );
   }
