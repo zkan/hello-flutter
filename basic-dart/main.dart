@@ -41,7 +41,9 @@ void main() async {
     print(name);
 
     await marketing.fetchMarketing();
-    
+
     Marketing future_marketing = await fetchMarketing();
     future_marketing.toInfo();
+
+    fetchMarketing().then((marketing) => marketing.toInfo());
 }
