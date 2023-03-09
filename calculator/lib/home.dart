@@ -7,6 +7,18 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBar(),
+      body: Container(
+        height: 200,
+        width: 150,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: Colors.pink.shade200,
+          borderRadius: const BorderRadius.only(
+            bottomRight: Radius.circular(24),
+          )
+        ),
+        child: const Text("Calculator"),
+      ),
     );
   }
 
