@@ -18,7 +18,7 @@ class Marketing {
   }
 
   double getCommissionAmount() {
-    return this.salePrice * (getCommission() / 100);
+    return this.salePrice * (this.getCommission() / 100);
   }
 
   void showInfo() {
@@ -26,7 +26,7 @@ class Marketing {
     print("First Name: ${this.firstName}");
     print("Last Name: ${this.lastName}");
     print("Sale price: ${this.salePrice}฿");
-    print("Commission: ${getCommission()}%");
-    print("Commission amount: ${getCommissionAmount()}฿");
+    print("Commission: ${this.getCommission()}%");
+    print("Commission amount: ${this.getCommissionAmount()}฿");
   }
 }
