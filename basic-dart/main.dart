@@ -1,7 +1,8 @@
+import 'async.dart';
 import 'class.dart';
 import 'marketing.dart';
 
-void main() {
+void main() async {
     print("Running");
 
     var cat = Cat(); // Prefer this
@@ -31,4 +32,11 @@ void main() {
     // print(marketing.lastName);
 
     marketing.toInfo();
+
+    // Option 1: Use then
+    getName().then((value) => print(value));
+
+    // Option 2: Use async & await
+    String name = await getName();
+    print(name);
 }
