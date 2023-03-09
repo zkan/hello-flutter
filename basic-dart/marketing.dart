@@ -33,4 +33,24 @@ class Marketing {
     print("Commission: ${this.getCommission()}%");
     print("Commission amount: ${this.getCommissionAmount()}฿");
   }
+
+  Future<void> fetchMarketing() {
+    return Future.delayed(
+      Duration(seconds: 1), 
+      toInfo,
+    );
+  }
+
+}
+
+Future<Marketing> fetchMarketing() {
+  return Future.delayed(
+    Duration(seconds: 1), 
+    () => Marketing(
+      id: 1, 
+      firstName: "Kan", 
+      lastName: "Ouivirach", 
+      salePrice: 10002.0
+    )
+  );
 }

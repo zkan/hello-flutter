@@ -39,4 +39,9 @@ void main() async {
     // Option 2: Use async & await
     String name = await getName();
     print(name);
+
+    await marketing.fetchMarketing();
+    
+    Marketing future_marketing = await fetchMarketing();
+    future_marketing.toInfo();
 }
