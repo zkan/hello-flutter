@@ -14,10 +14,17 @@ void main() {
     // We can't do this since it's a private variable
     // print(cat._private_id);
 
-    var marketing = Marketing();
-    marketing.id = 1;
-    marketing.firstName = "Kan";
-    marketing.lastName = "Ouivirach";
+    // var marketing = Marketing();
+    // marketing.id = 1;
+    // marketing.firstName = "Kan";
+    // marketing.lastName = "Ouivirach";
+
+    var marketing = Marketing(
+        id: 1,
+        firstName: "Kan",
+        lastName: "Ouivirach",
+    );
+
     print(marketing.id);
     print(marketing.firstName);
     print(marketing.lastName);
