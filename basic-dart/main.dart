@@ -28,4 +28,6 @@ void main() {
     print(marketing.id);
     print(marketing.firstName);
     print(marketing.lastName);
+
+    print(marketing.getCommission(5000000));
 }

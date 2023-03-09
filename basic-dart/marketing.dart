@@ -8,4 +8,11 @@ class Marketing {
         required this.firstName,
         required this.lastName,
     });
+
+    double getCommission(double salePrice) {
+        if (salePrice > 500000) {
+            return 3.0;
+        }
+        return 0.0;
+    }
 }
